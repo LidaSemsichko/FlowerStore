@@ -1,18 +1,14 @@
-package flower.store;
+package ua.edu.ucu.apps.flowers;
 
 public enum FlowerColor {
-    /**
-     * Flower colors.
-     */
-    RED("#FF0000"), BLUE("#0000FF");
-    private final String stringRepresentation;
+    RED("#FF0000"), GREEN("#00FF00"), BLUE("#0000FF"), YELLOW("#FFFF00"), WHITE("#FFFFFF");
 
-    FlowerColor(String stringRepresentation) {
-        this.stringRepresentation = stringRepresentation;
+    private String rgb;
+    private FlowerColor(String rgb) {
+        this.rgb = rgb;
     }
-
-    @Override
+    
     public String toString() {
-        return stringRepresentation;
+        return rgb;
     }
 }

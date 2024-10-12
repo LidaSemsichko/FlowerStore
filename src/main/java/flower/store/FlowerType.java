@@ -1,5 +1,6 @@
-package flower.store;
+package ua.edu.ucu.apps.flowers;
 
-public enum FlowerType {
-    CHAMOMILE, ROSE, TULIP;
+public enum FlowerType{
+    POSE, TULIP, CHAMOMILE;
+    
 }
