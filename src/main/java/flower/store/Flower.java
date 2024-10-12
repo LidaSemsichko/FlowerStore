@@ -1,29 +1,25 @@
-package ua.edu.ucu.apps.flowers;
+package flower.store;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+@NoArgsConstructor @AllArgsConstructor @Setter @Getter
 public class Flower {
     private double sepalLength;
     private FlowerColor color;
     private double price;
     private FlowerType flowerType;
 
+    public Flower(Flower flower) {
+        this.flowerType = flower.flowerType;
+        this.price = flower.price;
+        this.sepalLength = flower.sepalLength;
+        this.color = flower.color;
+    }
+
     public String getColor() {
         return color.toString();
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public Flower(Flower flower) {
-        flowerType = flower.flowerType;
-        color = flower.color;
-        price = flower.price;
-        sepalLength = flower.sepalLength;
     }
 }
